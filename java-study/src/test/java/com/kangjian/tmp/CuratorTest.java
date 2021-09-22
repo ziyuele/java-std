@@ -13,11 +13,43 @@ import org.apache.curator.framework.recipes.locks.Lease;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-@Ignore
 public class CuratorTest {
 
+
+    private static final CountDownLatch latch = new CountDownLatch(1);
+
+    @Test
+    public void doTest() throws Exception {
+        for ( int a = 0; a< 10; a ++) {
+            Thread thread = new Thread(new TestThread(System.currentTimeMillis()));
+            thread.start();
+            Thread.sleep(1000);
+        }
+        Thread.sleep(1000000);
+    }
+
+
+
+    class TestThread implements Runnable {
+        private long time;
+
+        public TestThread(long time) {
+            this.time = time;
+        }
+
+        @Override
+        public void run() {
+            try {
+                latch.await(500, TimeUnit.MILLISECONDS);
+                System.out.println(System.currentTimeMillis() - time);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
     @Test
     public void curatorTest() {
         RetryPolicy policy = new RetryPolicy() {

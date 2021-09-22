@@ -3,10 +3,7 @@ package com.ziyue;
 import lombok.Data;
 import org.junit.Test;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class TreeTest {
 
@@ -223,5 +220,48 @@ public class TreeTest {
             }
         }
     }
+
+    @Test
+    public void doTestA() {
+        Integer a = null;
+        int b = a;
+    }
+
+
+    @Data
+    class HSH {
+        int num;
+
+        public HSH(int num) {
+            this.num = num;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            HSH hsh = (HSH) o;
+            return num == hsh.num;
+        }
+
+        @Override
+        public int hashCode() {
+            return 1;
+        }
+    }
+
+    @Test
+    public void testHashMap() {
+        HashMap<HSH, String> hashMap = new HashMap<>();
+        HSH hsh = new HSH(1);
+        HSH hsh1 = new HSH(2);
+        hashMap.put(hsh, "test");
+        hashMap.put(hsh1, "good");
+
+        System.out.println(hashMap.get(hsh));
+        System.out.println(hashMap.get(hsh1));
+
+    }
+
 
 }

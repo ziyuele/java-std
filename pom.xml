@@ -27,6 +27,7 @@
         <module>springboot-std</module>
         <module>niuke-std</module>
         <module>bilbli-std</module>
+        <module>reactor-demo</module>
     </modules>
 
     <build>

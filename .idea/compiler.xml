@@ -9,10 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-std" />
         <module name="spi-std" />
-        <module name="mybaits-std" />
-        <module name="bilbli-std" />
+        <module name="reactor-demo" />
         <module name="niuke-std" />
         <module name="java-study" />
+        <module name="bilbli-std" />
+        <module name="mybaits-std" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="java-study" target="1.8" />
       <module name="mybaits-std" target="1.8" />
       <module name="niuke-std" target="1.8" />
+      <module name="reactor-demo" target="1.8" />
       <module name="spi-std" target="1.8" />
       <module name="springboot-std" target="1.8" />
       <module name="study" target="1.8" />

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/java-study/java-study.iml" filepath="$PROJECT_DIR$/java-study/java-study.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybaits-std/mybaits-std.iml" filepath="$PROJECT_DIR$/mybaits-std/mybaits-std.iml" />
       <module fileurl="file://$PROJECT_DIR$/niuke-std/niuke-std.iml" filepath="$PROJECT_DIR$/niuke-std/niuke-std.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reactor-demo/reactor-demo.iml" filepath="$PROJECT_DIR$/reactor-demo/reactor-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spi-std/spi-std.iml" filepath="$PROJECT_DIR$/spi-std/spi-std.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-std/springboot-std.iml" filepath="$PROJECT_DIR$/springboot-std/springboot-std.iml" />
       <module fileurl="file://$PROJECT_DIR$/study.iml" filepath="$PROJECT_DIR$/study.iml" />
