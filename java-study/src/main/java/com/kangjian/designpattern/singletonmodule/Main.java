@@ -1,6 +1,7 @@
 package com.kangjian.designpattern.singletonmodule;
 
 public class Main {
+    private static final Object lock = new Object();
     public static void main(String args[]) {
         Singleton singleton = Singleton.getInstance();
         Singleton singleton1 = Singleton.getInstance();
@@ -26,6 +27,9 @@ public class Main {
         }
         String s = "dfsaf";
         s.equals("dfs");
+        synchronized (lock) {
+
+        }
 
     }
 }

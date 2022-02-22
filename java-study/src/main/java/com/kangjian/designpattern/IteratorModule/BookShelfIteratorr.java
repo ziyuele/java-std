@@ -4,7 +4,7 @@ package com.kangjian.designpattern.IteratorModule;
  *  具体的迭代器
  */
 
-public class BookShelfIteratorr implements Iteratorr {
+public class BookShelfIteratorr implements Iteratorr<Book> {
 
     private BookShelf bookShelf;
     private int index;
@@ -24,11 +24,9 @@ public class BookShelfIteratorr implements Iteratorr {
     }
 
     @Override
-    public Object next() {
-
+    public Book next() {
         Book book =  bookShelf.getBookAt(index);
         index ++;
         return book;
-
     }
 }

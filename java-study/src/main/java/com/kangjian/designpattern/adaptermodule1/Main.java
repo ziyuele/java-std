@@ -5,7 +5,7 @@ package com.kangjian.designpattern.adaptermodule1;
  */
 public class Main {
     public static void main(String args[]){
-        PrintBander p = new PrintBander("test");
+        Print p = new PrintBander("test");
         p.printWeek();
         p.printStrong();
     }
