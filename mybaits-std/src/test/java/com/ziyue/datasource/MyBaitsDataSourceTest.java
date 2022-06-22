@@ -19,4 +19,20 @@ public class MyBaitsDataSourceTest {
         TestEntity test = sqlSession.selectOne("com.ziyue.mybaits.dao.TestMapper.getAllTest");
         logger.info(test);
     }
+
+    public String setName() {
+        try {
+            System.out.println(System.currentTimeMillis());
+            System.out.println("bbbbbbbbbb");
+            return "hahahahaa";
+        } finally {
+            System.out.println(System.currentTimeMillis());
+            System.out.println("aaaaaaaaaa");
+        }
+    }
+
+    @Test
+    public void doTest() {
+        System.out.println(setName());
+    }
 }
