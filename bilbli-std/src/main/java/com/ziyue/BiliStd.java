@@ -1,4 +1,4 @@
-package java.com.ziyue;
+package com.ziyue;
 
 public class BiliStd {
     public static void main(String args[]) {
