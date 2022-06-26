@@ -1,6 +1,5 @@
 package com.kangjian.designpattern.IteratorModule;
 
-import com.sun.tools.javac.util.List;
 
 /**
  * 迭代器
