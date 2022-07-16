@@ -1,5 +1,7 @@
 package com.kangjian.designpattern.interpretermodule;
 
+import jdk.nashorn.internal.parser.TokenStream;
+
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.StringTokenizer;
@@ -8,9 +10,10 @@ public class Context {
     private StringTokenizer tokenizer;
     private String currentToken;
 
-    public Context(String currentToken) {
-        this.currentToken = currentToken;
 
+    public Context(String text) {
+        this.tokenizer = new StringTokenizer(text);
+        nextToken();
     }
 
     public String nextToken() {
