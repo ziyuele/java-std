@@ -1,4 +1,4 @@
-package com.kangjian.designpattern.flyweight;
+package com.kangjian.designpattern.flyweightmodule;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.kangjian.designpattern.flyweight;
+package com.kangjian.designpattern.flyweightmodule;
 
 public class Main {
     public static void main(String[] args) {
