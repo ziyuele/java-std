@@ -6,6 +6,10 @@ public class SaleEnglishCourse extends EnglishCourse {
         super(name, price, type);
     }
 
+    public Double getOriginPrice() {
+        return super.getPrice();
+    }
+
     @Override
     public Double getPrice() {
         return super.getPrice() * 0.85;
