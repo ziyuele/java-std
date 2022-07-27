@@ -19,21 +19,25 @@ public class Test202103 {
     public void testThenApplay() {
         long time = System.currentTimeMillis();
         CompletableFuture<Integer> completableFuture = CompletableFuture.completedFuture(1);
+       CompletableFuture completableFuture1 =  completableFuture.thenApply( s -> {
+            return  2;
+        });
 
-        completableFuture.thenApplyAsync( t -> {
+       CompletableFuture completableFuture2 =  completableFuture1.thenApplyAsync( t -> {
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {
             }
             return 1;
         });
-        completableFuture.thenApplyAsync( t -> {
+        CompletableFuture completableFuture3 =  completableFuture1.thenApplyAsync( t -> {
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {
             }
             return 1;
         });
+        CompletableFuture.allOf(completableFuture1, completableFuture2, completableFuture3).join();
         System.out.println(System.currentTimeMillis() - time);
     }
 }
