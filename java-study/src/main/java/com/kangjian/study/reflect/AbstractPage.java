@@ -1,8 +1,7 @@
-package com.kangjian.reflect;
+package com.kangjian.study.reflect;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;

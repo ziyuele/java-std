@@ -1,4 +1,4 @@
-package com.kangjian.reflect;
+package com.kangjian.study.reflect;
 
 import lombok.Data;
 
