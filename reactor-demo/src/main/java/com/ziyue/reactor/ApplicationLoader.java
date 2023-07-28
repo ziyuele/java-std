@@ -21,7 +21,8 @@ public class ApplicationLoader {
     }
 
     public String f2(String s1) {
-        return s1 + "_f2";
+        throw new RuntimeException();
+        //return s1 + "_f2";
     }
 
     public String f4(String s2, String s3) {
@@ -107,6 +108,8 @@ public class ApplicationLoader {
         Map<String, String> ret =new HashMap<>();
         funtion1Ret.thenAccept(s -> ret.put("aa", s));
         funtion2Ret.thenAccept(s -> ret.put("bb", s));
+        s2f.exceptionally(e -> null);
+
         CompletableFuture.allOf(funtion1Ret, funtion2Ret).join();
         return ret;
     }

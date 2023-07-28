@@ -7,9 +7,11 @@ package com.kangjian.leetcode;
 public class LongString {
 
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws Exception {
         String s = "abcdeafrgsfbafrgfrg";
-        System.out.println(getRes(s));
+       // System.out.println(getRes(s));
+        Integer integer = 3;
+        System.out.println(((Class<?>) Class.forName("name").getField("TYPE").get(null)).isPrimitive());
     }
 
     public static String getRes(String s) {
